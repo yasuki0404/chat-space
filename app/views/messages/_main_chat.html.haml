@@ -1,0 +1,35 @@
+.chat-main
+  
+  .main-header
+    .main-header__left-box
+      %h2.main-header__left-box__current-group
+        test
+      %ul.main-header__left-box__member-list
+        Member：
+        %li.main-header__left-box__member-list__member sdfdfd
+        %li.main-header__left-box__member-list__member shima
+        %li.main-header__left-box__member-list__member うめうめ
+    .main-header__edit-btn Edit
+
+
+  .messages
+    .message
+      .message__upper-info
+        %p.message__upper-info__talker うめうめ
+        %p.message__upper-info__date 2019/11/12(Tue) 20:07:41
+      %p.message__text テスト
+    .message
+      .message__upper-info
+        %p.message__upper-info__talker うめうめ
+        %p.message__upper-info__date 2019/11/12(Tue) 20:07:49
+      %p.message__text aaaa
+
+  .form
+    %form.new_message
+      .input-box
+        %input.input-box__text{name: "message[content]", placeholder: "type a message", type: "text"}
+        %label{class: "input-box__image"}
+          = icon('fas', 'image')    
+          %input.input-box__image__file{type: "file"}
+      %input.submit-btn{name: "commit", type: "submit", value: "Send"}
+
