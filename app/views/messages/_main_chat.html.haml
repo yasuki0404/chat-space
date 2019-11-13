@@ -27,9 +27,9 @@
   .form
     %form.new_message
       .input-box
-        %input.input-box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
+        %input.input-box__text{name: "message[content]", placeholder: "type a message", type: "text"}
         %label{class: "input-box__image"}
           = icon('fas', 'image')    
           %input.input-box__image__file{type: "file"}
-      %input.submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
+      %input.submit-btn{name: "commit", type: "submit", value: "Send"}
 
