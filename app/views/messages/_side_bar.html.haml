@@ -13,9 +13,10 @@
             = icon('fas', 'cog')
             
   .groups
-    .group
-    %p.group__group-name テックエキスパート
-    %p.group__latest-message まだメッセージがありません
-    .group
-    %p.group__group-name test
-    %p.group__latest-message まだメッセージがありません
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .group__name
+            = group.name
+          .group__message
+            メッセージはまだありません。
