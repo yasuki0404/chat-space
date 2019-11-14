@@ -19,10 +19,7 @@
       }
       &__menu{
         display: flex;
-        .new-group__btn{
-          color: white;
-        }
-        .new-group__btn, .edit-user__btn {
+        .icon {
           color: white;
         }
       }
