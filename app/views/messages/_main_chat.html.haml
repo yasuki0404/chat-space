@@ -3,12 +3,13 @@
   .main-header
     .main-header__left-box
       %h2.main-header__left-box__current-group
-        test
+        = @group.name
       %ul.main-header__left-box__member-list
         Member：
-        %li.main-header__left-box__member-list__member sdfdfd
-        %li.main-header__left-box__member-list__member shima
-        %li.main-header__left-box__member-list__member うめうめ
+        %li.main-header__left-box__member-list__member
+          - @group.users.each do |user|
+            = user.name
+          
     .main-header__edit-btn Edit
 
   .messages
@@ -22,4 +23,3 @@
           = icon('fas', 'image') 
           = f.file_field :image, class: 'input-box__image__file'
       = f.submit 'Send', class: 'submit-btn'
-
